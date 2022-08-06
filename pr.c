@@ -64,16 +64,17 @@ char *f_pres(char *s, char *num, char sp)
 		if (sp == 's')
 		{
 			tmp = malloc(sizeof(char) * n);
-			for (i = 0; i < n; i++)
-				tmp[i] = s[i];
-				return (tmp); }
+		for (i = 0; i < n; i++)
+			tmp[i] = s[i];
+		return (tmp);
+		}
 		else
 			return (s); }
 	if (s[0] == '-')
 	{
 		tmp = malloc(sizeof(char) * n + 1);
 		if (!tmp)
-			return (NULL);
+		return (NULL);
 		tmp[0] = '-';
 		n++;
 		i = 1;
@@ -83,6 +84,7 @@ char *f_pres(char *s, char *num, char sp)
 			tmp[i] = s[j];
 		return (tmp); }
 	else if (s[0] >= '0' && s[0] <= '9')
+
 	{
 		tmp = malloc(sizeof(char) * n);
 		if (!tmp)
